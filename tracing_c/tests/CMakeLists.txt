@@ -1,0 +1,3 @@
+add_subdirectory(basic_tracing)
+add_subdirectory(file_tracing)
+add_subdirectory(no_tracing)
