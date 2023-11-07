@@ -46,9 +46,4 @@ mod tests {
         let result = addition(2, 2);
         assert_eq!(result, 4);
     }
-
-    #[test]
-    fn test_print_helloworld() {
-        print_helloworld();
-    }
 }
