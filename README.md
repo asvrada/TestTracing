@@ -34,4 +34,6 @@ But this is less flexible.
 ## To run
 ```bash
 make ctest
+# -- or --
+RUST_LOG=trace make ctest
 ```

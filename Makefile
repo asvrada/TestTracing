@@ -13,6 +13,7 @@ config_c: build_rust
 build_c: config_c
 	cd tracing_c/build && cmake --build . -j
 
+# RUST_LOG=trace make ctest
 ctest: build_c
 	cd tracing_c/build && ctest -V
 
