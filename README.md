@@ -1,5 +1,5 @@
 # TestTracing
-This repo experiments collection tracing data from Rust in C.
+This repo experiments collecting tracing data from Rust in C.
 
 ## Tracing in Rust
 
