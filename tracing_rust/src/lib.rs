@@ -1,5 +1,6 @@
 use std::ffi::c_int;
 use std::fs::File;
+use libc::FILE;
 
 use tracing::instrument;
 use tracing_subscriber::EnvFilter;
@@ -33,6 +34,17 @@ pub extern "C" fn init_tracing_file() {
     tracing_subscriber::fmt()
         .with_env_filter(filter)
         .with_writer(log_file)
+        .init();
+}
+
+#[no_mangle]
+pub extern "C" fn init_tracing_stream(FILE* stream) {
+    // Write to stream
+    let filter = EnvFilter::from_default_env();
+
+    tracing_subscriber::fmt()
+        .with_env_filter(filter)
+        .with_writer(stream)
         .init();
 }
 
