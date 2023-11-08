@@ -7,7 +7,7 @@ include(CTest)
 include_directories(include/)
 
 # Find the compiled Rust library
-find_library(RUST_LIB tracing_rust PATHS "${CMAKE_SOURCE_DIR}/../tracing_rust/target/release/")
+find_library(RUST_LIB tracing_rust PATHS "${CMAKE_SOURCE_DIR}/../tracing_rust/target/release/" REQUIRED)
 if ("RUST_LIB-NOTFOUND" STREQUAL ${RUST_LIB})
     message(FATAL_ERROR "Cannot find compiled Rust lib!!!")
 endif ()
